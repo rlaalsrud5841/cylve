@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYLVE | FLY_01 Detail</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg-black: #000; --text-white: #fff; --text-gray: #a0a0a0; --border-gray: #333; --font-main: 'Montserrat', sans-serif; --font-accent: 'Playfair Display', serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg-black); color: var(--text-white); font-family: var(--font-main); overflow-x: hidden; line-height: 1.6; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
+        a { text-decoration: none; color: inherit; }
+        img { width: 100%; height: auto; display: block; -webkit-user-drag: none; }
+
+        /* HEADER (메인과 동일) */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 30px 40px; position: absolute; width: 100%; z-index: 100; font-size: 10px; letter-spacing: 2px; }
+        .nav-group { display: flex; gap: 40px; }
+        .logo { font-family: var(--font-accent); font-size: 34px; letter-spacing: 6px; font-weight: 700; position: absolute; left: 50%; transform: translateX(-50%); }
+
+        /* PRODUCT HERO - 박스 스타일을 완전히 제거함 */
+        .product-hero { display: flex; gap: 80px; padding: 180px 0 100px; align-items: flex-start; }
+        
+        /* 왼쪽 제품 사진 영역 - 테두리와 배경색을 삭제하여 사진만 남김 */
+        .p-img-area { 
+            flex: 1.2; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .p-img-area img { 
+            width: 100%; 
+            height: auto;
+            max-width: 700px; /* 사진이 너무 커지지 않도록 조절 */
+        }
+
+        /* 오른쪽 정보 텍스트 박스 */
+        .p-info-box { flex: 0.8; padding-top: 20px; }
+        .p-info-box h1 { font-family: var(--font-accent); font-size: 38px; margin-bottom: 5px; font-weight: 400; letter-spacing: 1px; }
+        .p-info-box .p-sub { color: #666; font-size: 13px; margin-bottom: 30px; }
+        .p-info-box .price { font-size: 22px; font-weight: 400; margin-bottom: 40px; border-bottom: 1px solid #222; padding-bottom: 20px; }
+        .p-info-box .description { color: #888; font-size: 14px; line-height: 1.8; margin-bottom: 50px; font-weight: 300; }
+
+        /* 버튼 그룹 */
+        .btn-group { display: flex; gap: 15px; margin-bottom: 60px; }
+        .btn { flex: 1; padding: 18px; border: 1px solid #fff; font-size: 12px; font-weight: 600; text-align: center; cursor: pointer; transition: 0.4s; }
+        .btn-black { background: #fff; color: #000; }
+        .btn:hover { opacity: 0.7; }
+
+        /* 아코디언 메뉴 */
+        .acc-section { border-top: 1px solid #1a1a1a; }
+        .acc-row { padding: 22px 0; display: flex; justify-content: space-between; font-size: 13px; cursor: pointer; letter-spacing: 1px; color: #eee; border-bottom: 1px solid #1a1a1a; }
+        .acc-content { display: none; padding: 25px 0; color: #777; font-size: 13px; line-height: 1.8; font-weight: 300; border-bottom: 1px solid #1a1a1a; }
+
+        /* DETAIL GALLERY (나머지 사진들이 들어갈 곳) */
+        .detail-gallery { margin: 100px 0; }
+        .detail-gallery img { width: 100%; margin-bottom: 20px; }
+
+        /* FOOTER (메인과 동일) */
+        footer { border-top: 1px solid #111; padding: 120px 0 60px; background: #050505; }
+        .footer-top { display: flex; justify-content: space-between; margin-bottom: 100px; }
+        .footer-logo { font-family: var(--font-accent); font-size: 50px; letter-spacing: 8px; font-weight: 700; }
+        .footer-cols { display: flex; gap: 100px; }
+        .f-col h4 { font-size: 12px; margin-bottom: 30px; letter-spacing: 2px; }
+        .f-col p { font-size: 11px; color: #666; margin-bottom: 12px; cursor: pointer; }
+        .footer-bottom { display: flex; justify-content: space-between; font-size: 10px; color: #333; padding-top: 40px; border-top: 1px solid #111; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-group"><a href="#">SEARCH</a><a href="#">ABOUT</a></div>
+        <div class="logo"><a href="index.html">CYLVE</a></div>
+        <div class="nav-group"><a href="#">CART</a><a href="#">MYPAGE</a></div>
+    </header>
+
+    <div class="container">
+        <section class="product-hero">
+            <div class="p-img-area">
+                <img src="product1.jpg" alt="Main Product Image">
+            </div>
+
+            <div class="p-info-box">
+                <h1>FLY_01</h1>
+                <p class="p-sub">Brass, Rhodium Plating</p>
+                <p class="price">₩250,000</p>
+                
+                <p class="description">
+                    나비의 실루엣을 시니컬 아르누보 라인으로 재해석한 실버 손톱 주얼리입니다. 
+                    자연의 날개 곡선을 세련된 금속선으로 표현하여 우아하면서도 시크한 포인트를 더합니다. 
+                    고혹적인 분위기를 만들어 주는 브랜드의 시그니처 아이템입니다.
+                </p>
+
+                <div class="btn-group">
+                    <div class="btn btn-black">ADD TO CART</div>
+                    <div class="btn btn-outline">ADD TO WISHLIST</div>
+                </div>
+
+                <div class="acc-section">
+                    <div class="acc-row" onclick="toggleAcc(this)">FUNCTIONS <span>+</span></div>
+                    <div class="acc-content">
+                        손끝에 반지처럼 끼워 고정하는 방식의 손톱 주얼리로, 내부 곡면이 손톱 라인을 따라 밀착되도록 설계되었습니다.
+                    </div>
+                    
+                    <div class="acc-row" onclick="toggleAcc(this)">PAYMENT & DELIVERY <span>+</span></div>
+                    <div class="acc-content">
+                        영업일 기준 7-14일의 제작 기간이 소요되며, 전국 무료 배송됩니다.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="detail-gallery">
+            <img src="model_detail1.jpg" alt="Detail 1">
+            <img src="model_detail2.jpg" alt="Detail 2">
+            </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">CYLVE</div>
+                <div class="footer-cols">
+                    <div class="f-col">
+                        <h4>SHOP</h4>
+                        <p>CHAINS</p><p>EARRINGS</p><p>NECKLACES</p><p>EYEWEAR</p>
+                    </div>
+                    <div class="f-col">
+                        <h4>SUPPORT</h4>
+                        <p>Contact us</p><p>FAQ / Help center</p><p>About</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>COPYRIGHT © 2025 CYLVE | ALL RIGHTS RESERVED.</p>
+                <div style="display:flex; gap:20px;"><span>IG</span><span>TW</span></div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleAcc(el) {
+            const content = el.nextElementSibling;
+            const span = el.querySelector('span');
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                span.innerText = "+";
+            } else {
+                content.style.display = "block";
+                span.innerText = "-";
+            }
+        }
+    </script>
+</body>
+</html>
